@@ -1,0 +1,130 @@
+/*
+Theme Name: Jarretts Theme
+Author: Jarrett Fuller
+Author URI: http://www.jarrettfuller.com
+Description: This is my first WP theme
+Version: 1.0
+*/
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Slabo 27px', Georgia, Times, serif;
+    background-color: indianred;
+}
+
+.wrapper {
+    margin: auto;
+    margin-top: 50px;
+    max-width: 1200px;
+    background-color: white;
+    padding: 50px;
+    padding-top: 0px;
+}
+/*
+.widget {
+    border: 1px red solid;
+}
+*/
+
+
+/*------HEADER---------*/
+header {
+    padding: 20px;
+}
+h1 {
+    text-align: center;
+    font-size: 60px;
+    line-height: 60px;
+}
+.breaking {
+    background-color: yellow;
+    width: 100%;
+}
+.breaking h3 {
+    padding: 15px;
+}
+
+/*------NAVIGATION---------*/
+
+nav {
+    width: 100%;
+    font-size: 16px;
+    border-bottom: 3px solid grey;
+    border-top: 3px solid grey;
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+}
+nav ul {
+    display: flex;
+
+}
+nav li {
+    list-style: none;
+    padding-right: 20px;
+}
+nav li a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+nav li a:hover {
+    color: indianred;
+    border-bottom: 1px solid black;
+}
+
+
+/*--------MAIN----------*/
+main {
+    width: 100%;
+    float: none;
+    padding-top: 50px;
+}
+main a {
+    color: indianred;
+    text-decoration: none;
+    padding-top: 100px;
+}
+main a:hover {
+    color: black;
+}
+main li {
+    list-style: none;
+    border-bottom: 1px dotted indianred;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+}
+main .date,
+.author {
+    font-size: 16px;
+    text-transform: uppercase;
+    flex: 1;
+    font-family: 'Inconsolata', Courier, monospace;
+    color: lightgray;
+}
+main .title {
+    font-size: 36px;
+    color: indianred;
+    flex: 2;
+}
+
+/*--------FOOTER----------*/
+
+footer li {
+    list-style: none;
+    float: left;
+    padding-right: 20px;
+}
+footer li a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+footer li a:hover {
+    color: indianred;
+    border-bottom: 1px solid black;
+}
