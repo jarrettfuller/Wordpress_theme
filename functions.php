@@ -5,6 +5,9 @@ function jarrett_scripts() {
     // Theme stylesheet
     wp_enqueue_style( 'jarrett-style', get_stylesheet_uri());
 
+    // js files
+    wp_enqueue_script('owl-carousel', get_template_directory_uri() . '/js/owl.carousel.min.js', array('jquery') );
+
 }
 add_action( 'wp_enqueue_scripts', 'jarrett_scripts' );
 
@@ -40,38 +43,29 @@ function jarrett_widgets() {
 }
 add_action( 'widgets_init', 'jarrett_widgets');
 
-function jarrett_get_breaking_news() {
+    //old breaking news function
+//function jarrett_get_breaking_news() {
+//
+//    $args = array(
+//        'post_status' => 'publish',
+//        'category' => '9',
+//        'posts_per_page' => '1',
+//        'offset' => '0',
+//        'post_type' => 'post',
+//    );
+//    return get_posts($args);
+//}
+
+    //function for getting posts with arrays for category and post count
+function jarrett_get_posts($category_id, $per_page = '5') {
 
     $args = array(
         'post_status' => 'publish',
-        'category' => '9',
-        'posts_per_page' => '1',
+        'category' => $category_id,
+        'posts_per_page' => $per_page,
         'offset' => '0',
         'post_type' => 'post',
     );
     return get_posts($args);
 }
 
-function jarrett_get_top_stories() {
-
-    $args = array(
-        'post_status' => 'publish',
-        'category' => '-9',
-        'posts_per_page' => '5',
-        'offset' => '0',
-        'post_type' => 'post',
-    );
-    return get_posts($args);
-}
-
-function jarrett_get_category_posts() {
-
-    $args = array(
-        'post_status' => 'publish',
-        'category' => '4',
-        'posts_per_page' => '5',
-        'offset' => '0',
-        'post_type' => 'post',
-    );
-    return get_posts($args);
-}

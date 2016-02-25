@@ -12,7 +12,7 @@
 
         <div class="breaking">
 
-            <?php if($breaking = jarrett_get_breaking_news()): ?>
+            <?php if($breaking = jarrett_get_posts('9', '1')): ?>
             <?php foreach($breaking as $post): setup_postdata($post); ?>
                 <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
             <?php endforeach; ?>
