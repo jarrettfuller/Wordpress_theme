@@ -24,7 +24,11 @@
 
         <div class="wrapper">
             <header>
-                <h1>Jarrett!</h1>
+                <?php if ( get_theme_mod( 'jarrett_logo' ) ) : ?>
+                <div class='site-logo'>
+                    <img src="<?php echo esc_url(get_theme_mod('jarrett_logo')); ?>" alt="">
+                </div>
+                <?php endif; ?>
             </header>
 
             <nav>

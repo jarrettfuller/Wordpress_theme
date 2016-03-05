@@ -1,5 +1,7 @@
 <?php
 
+add_theme_support( 'post-thumbnails' );
+
 function jarrett_scripts() {
 
     // Theme stylesheet
@@ -7,6 +9,7 @@ function jarrett_scripts() {
 
     // js files
     wp_enqueue_script('owl-carousel', get_template_directory_uri() . '/js/owl.carousel.min.js', array('jquery') );
+    wp_enqueue_script('first-theme-js', get_template_directory_uri() . '/js/first-theme.js', array('jquery', 'owl-carousel') );
 
 }
 add_action( 'wp_enqueue_scripts', 'jarrett_scripts' );
@@ -18,6 +21,23 @@ function jarrett_menus() {
     register_nav_menu('footer-menu', __('Footer menu') );
 }
 add_action( 'init', 'jarrett_menus' );
+
+function jarrett_theme($wp_customize) {
+
+    $wp_customize->add_setting('jarrett_logo');
+
+    $wp_customize->add_control( new WP_Customize_Image_Control(
+        $wp_customize,
+        'jarrett_logo',
+        array(
+            'label' => __('Logo'),
+            'section' => 'title_tagline',
+            'settings' => 'jarrett_logo',
+        )
+    ) );
+
+}
+add_action( 'customize_register', 'jarrett_theme');
 
 function jarrett_widgets() {
 
@@ -55,6 +75,7 @@ add_action( 'widgets_init', 'jarrett_widgets');
 //    );
 //    return get_posts($args);
 //}
+
 
     //function for getting posts with arrays for category and post count
 function jarrett_get_posts($category_id, $per_page = '5') {
