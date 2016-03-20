@@ -4,7 +4,7 @@
     <title>Jarrett's News Site</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
         <?php wp_head(); ?>
     </head>
@@ -25,7 +25,7 @@
         <div class="wrapper">
             <header>
                 <?php if ( get_theme_mod( 'jarrett_logo' ) ) : ?>
-                <div class='site-logo'>
+                <div class="site-logo">
                     <img src="<?php echo esc_url(get_theme_mod('jarrett_logo')); ?>" alt="">
                 </div>
                 <?php endif; ?>

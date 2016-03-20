@@ -1,0 +1,223 @@
+/*
+Theme Name: Jarretts Theme
+Author: Jarrett Fuller
+Author URI: http://www.jarrettfuller.com
+Description: This is my first WP theme
+Version: 1.0
+*/
+
+@maincolor: rgba(0,0,0,.5);
+@grey: rgba(0,0,0,.3);
+@navfootbord: 3px solid grey;
+
+@import "css/owl.carousel.css";
+@import "css/owl.theme.css";
+@import "css/owl.transitions.css";
+
+.main-size {
+    margin: auto;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Karla', Georgia, Times, serif;
+}
+
+.wrapper {
+    margin: auto;
+    margin-top: 50px;
+//    max-width: 1200px;
+    padding-top: 0px;
+}
+
+img {
+    width: 100%;
+}
+/*
+.widget {
+    border: 1px red solid;
+}
+*/
+
+
+/*------HEADER---------*/
+header {
+    padding: 20px;
+}
+h1 {
+    text-align: center;
+    font-size: 60px;
+    line-height: 60px;
+}
+h2 {
+    font-size: 36px;
+    padding-bottom: 20px;
+}
+.breaking {
+    background-color: yellow;
+    width: 100%;
+}
+.breaking h3 {
+    padding: 15px;
+}
+.site-logo {
+    margin: auto;
+}
+.site-logo img {
+    width: 20%;
+}
+
+/*------NAVIGATION---------*/
+
+nav {
+    width: 100%;
+    font-size: 16px;
+    border-bottom: @navfootbord;
+    border-top: @navfootbord;
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+}
+nav ul {
+    display: flex;
+
+}
+nav li {
+    list-style: none;
+    padding-right: 20px;
+}
+nav li a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+nav li a:hover {
+    color: @maincolor;
+    border-bottom: 1px solid black;
+}
+
+
+/*--------MAIN----------*/
+main {
+    width: 100%;
+    float: none;
+    padding-top: 50px;
+}
+main a {
+    color: @maincolor;
+    text-decoration: none;
+    padding-top: 100px;
+}
+main a:hover {
+    color: black;
+}
+main .post-stripe {
+    border-bottom: 1px dotted @maincolor;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+}
+main .date,
+.author {
+    font-size: 16px;
+    text-transform: uppercase;
+    flex: 1;
+    font-family: 'Inconsolata', Courier, monospace;
+    color: lightgray;
+}
+main .post {
+    font-size: 18px;
+    flex: 2;
+    padding-right: 20px;
+}
+
+/*--------ARTICLE----------*/
+article {
+    width: 50%;
+    margin: auto;
+}
+
+
+/*--------FOOTER----------*/
+footer {
+    border-top: @navfootbord;
+    background-color: rgba(0,0,0,.8);
+    width: 100%;
+    padding-top: 20px;
+    margin-top: 50px;
+    color: white;
+}
+footer li {
+    list-style: none;
+    float: left;
+    padding-right: 20px;
+}
+footer li a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+footer li a:hover {
+    color: @maincolor;
+   border-bottom: 1px solid black;
+}
+footer main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0px;
+    padding-bottom: 50px;
+}
+
+
+/*--------OWL CAROUSEL----------*/
+
+.carousel {
+    .main-size;
+    background: @grey;
+    margin-bottom: 50px;
+}
+.carousel_slide img {
+    width: 50%;
+    height: auto;
+    float: left;
+    margin-right: 1em;
+}
+
+
+/*--------------------*/
+
+/* ------MOBILE-------*/
+
+@media (max-width: 700px) {
+
+
+    main .post-stripe {
+        display:block;
+        width: 100%;
+        padding: 20px;
+
+}
+    /*--------OWL CAROUSEL----------*/
+
+.carousel {
+    width: 100%;
+    background: @grey;
+    margin-bottom: 30px;
+}
+.carousel_slide img {
+    width: 100%;
+    height: auto;
+    float: none;
+    margin-right: 0px;
+}
+
+}

@@ -1,12 +1,10 @@
 <footer>
+    <main>
     <?php wp_nav_menu( array('theme_location' => 'footer-menu') ); ?>
 
-</footer>
-
 <?php dynamic_sidebar('footer'); ?>
-
-</div>
-
+</main>
+</footer>
 
 <?php wp_footer(); ?>
 
