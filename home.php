@@ -19,10 +19,12 @@
     <p><?php $image; ?></p>
     <?php endif; ?>
 
-<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> |
-    <?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?>
+            <span class="date"><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?></span>
+<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 
+<p><?php the_excerpt(); ?></p>
 
+        <p><a href="<?php echo get_permalink(); ?>"> Read More...</a></p>
         </div>
     <?php endforeach; ?>
 

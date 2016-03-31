@@ -7,12 +7,13 @@
         <link href='https://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
         <?php wp_head(); ?>
+        <link href='https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
     </head>
     <body>
 
         <div class="breaking">
 
-            <?php if($breaking = jarrett_get_posts('9', '1')): ?>
+            <?php if($breaking = jarrett_get_posts('10', '1')): ?>
             <?php foreach($breaking as $post): setup_postdata($post); ?>
                 <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
             <?php endforeach; ?>
@@ -32,9 +33,15 @@
             </header>
 
             <nav>
-                <?php wp_nav_menu( array('theme_location' => 'main-menu') ); ?>
+                <main>
+                <div class="main-nav"><?php wp_nav_menu( array('theme_location' => 'main-menu') ); ?>
 
-                <?php dynamic_sidebar('header'); ?>
+                    <div class="search">
+                <?php dynamic_sidebar('header'); ?></div>
+                </div>
+
+
+                </main>
             </nav>
 
 

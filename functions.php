@@ -78,7 +78,7 @@ add_action( 'widgets_init', 'jarrett_widgets');
 
 
     //function for getting posts with arrays for category and post count
-function jarrett_get_posts($category_id, $per_page = '5') {
+function jarrett_get_posts($category_id, $per_page = '5', $order_by = 'date', $exclude = '') {
 
     $args = array(
         'post_status' => 'publish',
@@ -86,6 +86,8 @@ function jarrett_get_posts($category_id, $per_page = '5') {
         'posts_per_page' => $per_page,
         'offset' => '0',
         'post_type' => 'post',
+        'orderby' => $order_by,
+        'exclude' => $exclude,
     );
     return get_posts($args);
 }
