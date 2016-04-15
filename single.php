@@ -4,7 +4,13 @@
 
             <?php while(have_posts()): the_post(); ?>
 
+<?php if(has_post_thumbnail()): ?>
+    <div class="page-image"><?php the_post_thumbnail(); ?></div>
+<?php endif; ?>
+
 <div class="articles">
+
+
 <h1><?php the_title(); ?></h1>
                 <p class="byline">by <?php the_author(); ?> • <?php the_time('F j, Y'); ?></p>
 
@@ -15,6 +21,7 @@
             <p class="byline">Posted in <?php the_category(','); ?></p>
 </article>
 
+    <div class="related">
     <h2>Related Stories</h2>
     <!---related stories ---->
     <?php
@@ -30,12 +37,17 @@
     <?php if(sizeof($related_posts)):  ?>
     <ul>
     <?php foreach($related_posts as $post):  ?>
-        <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+        <li><?php if(has_post_thumbnail()): ?>
+    <div class="page-image"><?php the_post_thumbnail(); ?></div>
+<?php endif; ?>
+
+
+            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
         </li>
          <?php endforeach; ?>
     </ul>
     <?php endif; ?>
-
+</div>
     </div>
             <?php endwhile; ?>
 
