@@ -92,3 +92,9 @@ function jarrett_get_posts($category_id, $per_page = '5', $order_by = 'date', $e
     return get_posts($args);
 }
 
+add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10, 3 );
+
+function jarrett_remove_thumbnail_dimensions( $html, $post_id, $post_image_id ) {
+    $html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html );
+    return $html;
+}
