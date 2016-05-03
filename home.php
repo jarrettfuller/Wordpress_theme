@@ -43,9 +43,14 @@
                 <span class="date"><?php the_time('F j, Y'); ?></span>
 
                 <span class="post">
+
+                            <?php  if($image = the_post_thumbnail()): ?>
+    <p><?php $image; ?></p>
+    <?php endif; ?>
+
                     <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 
-                    <p><?php the_content(); ?></p>
+
                 </span>
 
                 <span class="author">by <?php the_author(); ?></span>

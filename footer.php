@@ -1,8 +1,9 @@
 <footer>
     <main>
-    <?php wp_nav_menu( array('theme_location' => 'footer-menu') ); ?>
+    <p><?php wp_nav_menu( array('theme_location' => 'footer-menu') ); ?></p>
 
-<?php dynamic_sidebar('footer'); ?>
+        <p>&copy; 2016 The Site Media. All Rights Reserved. Articles borrowed without permission.</p>
+
 </main>
 </footer>
 
