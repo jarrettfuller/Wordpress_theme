@@ -53,7 +53,7 @@
 
                 </span>
 
-                <span class="author">by <?php the_author(); ?></span>
+                <span class="author"><?php the_category(','); ?></span>
 </div>
 
             <?php endwhile; ?>

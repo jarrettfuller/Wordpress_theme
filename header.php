@@ -28,7 +28,7 @@
             <header>
                 <?php if ( get_theme_mod( 'jarrett_logo' ) ) : ?>
                 <div class="site-logo">
-                    <img src="<?php echo esc_url(get_theme_mod('jarrett_logo')); ?>" alt="">
+                    <a href="<?php echo site_url() ?>"><img src="<?php echo esc_url(get_theme_mod('jarrett_logo')); ?>" alt=""></a>
                 </div>
                 <?php endif; ?>
             </header>

@@ -12,14 +12,18 @@
 
 
 <h1><?php the_title(); ?></h1>
-                <p class="byline">by <?php the_author(); ?> • <?php the_time('F j, Y'); ?></p>
+                <p class="byline">by <?php echo types_render_field('author'); ?> • <?php the_time('F j, Y'); ?></p>
 
 <article>
 
             <p><?php the_content(); ?></p>
 
-            <p class="byline">Posted in <?php the_category(','); ?></p>
+            <div class="bio"><?php echo types_render_field('bio'); ?></div>
+
+            <div class="categories"><?php the_category(''); ?></div>
 </article>
+
+    <section class="clear"></section>
 
     <div class="related">
     <h2>Related Stories</h2>
